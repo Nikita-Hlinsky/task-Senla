@@ -1,10 +1,14 @@
-package tasks;
+package main.tasks;
+
+import tasks.Task;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Scanner;
 import java.util.List;
 
-public class PrimeNumberTask {
+public class PrimeNumberTask implements tasks.Task {
+    Scanner in = new Scanner(System.in);
 
     static List<Integer> primeNumbersBruteForce(int n) {
         List<Integer> primeNumbers = new ArrayList<>();
@@ -24,4 +28,17 @@ public class PrimeNumberTask {
         }
         return true;
     }
+    @Override
+    public void run(){
+        System.out.println("Enter num: ");
+        int num = in.nextInt();
+        System.out.println(primeNumbersBruteForce(num));
+    }
+
+    @Override
+    public void printDescription(){
+        System.out.println("Необходимо написать программу, которая вычисляет простые\n" +
+                "числа в пределах от 1 до N.");
+    }
+
 }

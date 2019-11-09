@@ -1,12 +1,16 @@
-package tasks;
+package main.tasks;
 
-import models.Line;
+import main.models.Line;
 import models.Point;
 
-public class LineIntersectionTask implements Task {
+import java.util.Scanner;
+public class LineIntersectionTask implements tasks.Task {
+    Scanner in = new Scanner(System.in);
+
     @Override
     public void run() {
-        System.out.println("Enter 2 lines: ");
+        System.out.println("enter 2 lines: ");
+
         int a1, a2, b1, b2, c1, c2, d1, d2;
         a1 = in.nextInt();
         a2 = in.nextInt();
@@ -16,20 +20,19 @@ public class LineIntersectionTask implements Task {
         b2 = in.nextInt();
         d1 = in.nextInt();
         d2 = in.nextInt();
-        models.Point point1 = new models.Point(a1, a2);
-        models.Point point2 = new models.Point(b1, b2);
-        models.Point point3 = new models.Point(c1, c2);
-        models.Point point4 = new models.Point(d1, d2);
-        CheckIntersection(point1, point2, point3, point4); //первые 4 точки, это первая линия и тд
 
+//        Point p1 = new Point(1, 2);
+//        Point p2 = new Point(5, 2);
+//        Point p3 = new Point(8, 2);
+//        Point p4 = new Point(3, 4);
 
-        Point p1 = new Point(1, 2);
-        Point p2 = new Point(5, 2);
-        Point p3 = new Point(8, 2);
-        Point p4 = new Point(3, 4);
+        Point p1 = new Point(a1, a2);
+        Point p2 = new Point(b1, b2);
+        Point p3 = new Point(c1, c2);
+        Point p4 = new Point(d1, d2);
 
         Line l1 = new Line(p1, p2);
-        Line l2 = new Line(p1, p3);
+        Line l2 = new Line(p3, p4);
 
         boolean res = intersection(l1, l2);
         System.out.println(res);
@@ -39,7 +42,8 @@ public class LineIntersectionTask implements Task {
     @Override
     public void printDescription() {
         System.out.println(
-
+            "Необходимо написать программу, которая определяет\n" +
+                    "пересекаются ли два отрезка."
         );
     }
 

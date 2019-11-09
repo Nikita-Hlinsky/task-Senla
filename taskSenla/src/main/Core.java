@@ -1,7 +1,8 @@
-import com.sun.scenario.effect.GaussianShadow;
-import tasks.FibonacciTask;
-import tasks.GcdTask;
-import tasks.LineIntersectionTask;
+package main;
+
+//import com.sun.scenario.effect.GaussianShadow;
+import main.tasks.*;
+
 import tasks.Task;
 
 import java.util.*;
@@ -9,7 +10,12 @@ import java.util.*;
 public class Core {
     public static void main(String[] args) {
 
-        Task k = new LineIntersectionTask();
+        //Task k = new LineIntersectionTask();
+        Task k = new PrimeNumberTask();
+        //Task k = new FibonacciTask();
+        //Task k = new GcdTask();
+        //Task k = new ReplacementTask();
+        //Task k = new TaskSix();
 
         k.printDescription();
         k.run();
@@ -18,8 +24,7 @@ public class Core {
 //        System.out.println(l);
 
 //
-//        int num = in.nextInt();
-//        System.out.println(primeNumbersBruteForce(num)); //брут генерация простых чисел
+         //брут генерация простых чисел
 
 //        int fibCount = in.nextInt();
 //        rangeFib(fibCoutn); //Фибоначчи

@@ -1,4 +1,4 @@
-package tasks;
+package main.tasks;
 
 
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.Scanner;
  *
  *
  * */
-public class TaskSix implements Task {
+public class TaskSix implements tasks.Task {
 
     @Override
     public void run() {
@@ -23,7 +23,8 @@ public class TaskSix implements Task {
 
     @Override
     public void printDescription() {
-
+        System.out.println("Необходимо написать программу, которая проверяет слово на\n" +
+                "\"палиндромность\".");
     }
 
     private static boolean isPalindrome(String s) {

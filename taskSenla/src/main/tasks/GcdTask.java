@@ -1,8 +1,8 @@
-package tasks;
+package main.tasks;
 
 import java.util.Scanner;
 
-public class GcdTask implements Task {
+public class GcdTask implements tasks.Task {
 
     @Override
     public void run() {
@@ -18,7 +18,8 @@ public class GcdTask implements Task {
 
     @Override
     public void printDescription() {
-        System.out.println("Задача НОК и НДО");
+        System.out.println("Необходимо написать рекурсивный алгоритм для нахождения НОД\n" +
+                "и НОК двух чисел.");
     }
 
     private static int gcd(int a, int b) {
