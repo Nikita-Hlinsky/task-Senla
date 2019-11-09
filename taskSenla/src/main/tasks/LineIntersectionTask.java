@@ -4,6 +4,7 @@ import main.models.Line;
 import models.Point;
 
 import java.util.Scanner;
+
 public class LineIntersectionTask implements tasks.Task {
     Scanner in = new Scanner(System.in);
 
